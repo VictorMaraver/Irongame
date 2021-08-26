@@ -17,12 +17,12 @@ const Game = {
     this.ctx = this.canvasDom.getContext('2d')
     this.setDimensions()
 
-    this.background = new Background(this.ctx, this.canvasSize.width, this.canvasSize.height, "/images/backgroundwestern.png");
+    this.background = new Background(this.ctx, this.canvasSize.width, this.canvasSize.height, "images/backgroundwestern.png");
     this.text1 = new text(this.ctx, this.canvasSizeWidth, this.canvasSizeHeight, Game.canvasSize.width / 6, Game.canvasSize.height / 6, 50, 50)
     this.text2 = new text(this.ctx, this.canvasSizeWidth, this.canvasSizeHeight, Game.canvasSize.width / 6, Game.canvasSize.height / 6, Game.canvasSize.width - Game.canvasSize.width / 4, 50)
 
-    this.player1 = new Player(this.ctx, this.canvasSize.width, this.canvasSize.height, 100, this.canvasSize.height / 2, "../images/gunfighter-right.png")
-    this.player2 = new Player(this.ctx, this.canvasSize.width, this.canvasSize.height, Game.canvasSize.width - 200, this.canvasSize.height / 2, "../images/gunfighter-left.png")
+    this.player1 = new Player(this.ctx, this.canvasSize.width, this.canvasSize.height, 100, this.canvasSize.height / 2, "images/gunfighter-right.png")
+    this.player2 = new Player(this.ctx, this.canvasSize.width, this.canvasSize.height, Game.canvasSize.width - 200, this.canvasSize.height / 2, "images/gunfighter-left.png")
 
     this.setListeners()
     this.start()
@@ -142,7 +142,7 @@ const Game = {
   },
 
   generateObstacles() {
-    this.obstacles.push(new Obstacle(this.ctx, 250, 250, (this.canvasSize.width / 2) - 125, 10, 20, "/images/train2.png"));
+    this.obstacles.push(new Obstacle(this.ctx, 250, 250, (this.canvasSize.width / 2) - 125, 10, 20, "images/train2.png"));
   },
   generateBonnus() {
     if (this.bonnus.length < 1) {
@@ -237,7 +237,7 @@ const Game = {
   },
 
   gameOver() {
-    this.goBackground = new Background(this.ctx, this.canvasSize.width, this.canvasSize.height, "/images/gameover1.png")
+    this.goBackground = new Background(this.ctx, this.canvasSize.width, this.canvasSize.height, "images/gameover1.png")
     this.eoGame = new GameOver(this.ctx, this.canvasSizeWidth, this.canvasSizeHeight)
 
       if (this.player1.lives === 0) {
