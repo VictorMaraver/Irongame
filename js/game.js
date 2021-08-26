@@ -146,7 +146,7 @@ const Game = {
   },
   generateBonnus() {
     if (this.bonnus.length < 1) {
-      this.bonnus.push(new Bonnus(this.ctx, this.canvasSize.width, this.canvasSize.height, 50, 50, (this.canvasSize.width / 4) - 125, 10, "/images/ballas.png"));
+      this.bonnus.push(new Bonnus(this.ctx, this.canvasSize.width, this.canvasSize.height, 50, 50, (this.canvasSize.width / 4) - 125, 10, "images/ballas.png"));
     }
   },
 
